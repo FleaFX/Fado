@@ -1,4 +1,6 @@
-﻿module Query
+﻿namespace Fado
+
+module Query = 
 
   open System
   open System.Data.Common

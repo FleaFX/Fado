@@ -1,4 +1,6 @@
-﻿module DbContext
+﻿namespace Fado
+
+module DbContext =
 
   open System
   open System.Data
