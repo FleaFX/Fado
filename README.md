@@ -22,12 +22,12 @@ let books =
   WHERE [Author] = @Author AND [Isbn] = @Isbn"
   |> fromSql
   |> addParameter (Record({| Author = "Hugo Claus"; Isbn = "9789023430988" |})
-  |> executeReader db
-  |> fun row ->
-      {
-        Id = Map.uniqueidentifier "Id" row
-        Title = Map.varchar "Title" row
-      }
+  |> map db
+       fun row ->
+         {
+            Id = Map.uniqueidentifier "Id" row
+            Title = Map.varchar "Title" row
+         }
       
 // performing data manipulation
 "INSERT INTO [Books] ([Id], [Title])
