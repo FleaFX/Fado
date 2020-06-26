@@ -2,6 +2,12 @@
 
 I needed a library that makes access to relational databases simple in F#. Here it is.
 
+## Install
+
+```Powershell
+PM> Install-Package Fado
+```
+
 ## Quick how to:
 
 ```F#
